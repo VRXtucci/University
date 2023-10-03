@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Si no hay errores, intentar iniciar sesión
     if (count($errors) == 0) {
-        // $password = md5($password); // Puedes usar hash más seguros en lugar de md5
+        $password = md5($password); // Puedes usar hash más seguros en lugar de md5
         echo  "</br>" . "No hay errores en el formulario"; // Mensaje de depuración
 
         // Consulta SQL para verificar si el usuario existe en la base de datos
